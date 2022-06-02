@@ -14,22 +14,78 @@
           <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
         </div>
     </nav>
-    <div class="min-vh-100 d-flex align-items-left bg-light">
-        <!-- Change the alignment of flex item to center with justify-content-center -->
-        <section class="w-100 row justify-content-left align-items-left">  
-          <div class="col-10 col-md-6 col-lg-5">
-            <form class="bg-white rounded">
-              <h3>Search for a city:</h3>
-              <div class="form-group">
-                <input type="text" id="city" class="form-control" placeholder="city name" required />
-              </div>    
-              <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary btn-xl" type="button">Search</button>
-              </div>            
-            </form>
+    <section class="row justify-content-left my-4">
+        <div class="col-12 col-sm-6 col-md-4">
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="city-input" placeholder="city" />
+            </div>
+            <button class="btn btn-block btn-info">Submit</button>
+        </form>
+        </div>
+      </section>
+    <main class="container">
+        <!-- Bootstrap spacing utilities use m- for margin and p- for padding --> 
+        <section class="row my-4">
+          <div class="col-12 col-md-9">
+            <h2>5-Day Forecast</h2>
+            <!-- Use justify-content utilities to change alignment of flex items on the main axis -->
+            <section class="row justify-content-around">
+              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="card">
+                  <h3 class="card-header bg-info">
+                    Service 1
+                  </h3>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium dolor at, blanditiis rem
+                      quisquam ipsam ipsum. Magnam ut quibusdam facilis consequatur veritatis, ullam molestiae, inventore
+                      neque,
+                      quas obcaecati laborum?
+                    </p>
+                    <button class="btn btn-block btn-info">Learn more.</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="card">
+                  <h3 class="card-header bg-success">
+                    Service 2
+                  </h3>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium dolor at, blanditiis rem
+                      quisquam ipsam ipsum. Magnam ut quibusdam facilis consequatur veritatis, ullam molestiae, inventore
+                      neque,
+                      quas obcaecati laborum?
+                    </p>
+                    <button class="btn btn-block btn-info">Learn more.</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+                <div class="card">
+                  <h3 class="card-header bg-warning">
+                    Service 3
+                  </h3>
+                  <div class="card-body">
+                    <p class="card-text">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium dolor at, blanditiis rem
+                      quisquam ipsam ipsum. Magnam ut quibusdam facilis consequatur veritatis, ullam molestiae, inventore
+                      neque,
+                      quas obcaecati laborum?
+                    </p>
+                    <button class="btn btn-block btn-info">Learn more.</button>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
-        </section>  
-      </div>
+        </section>   
+        <hr />
+      </main>
     <script src="./assets/js/script.js"></script>  
 </body>
 </html>
