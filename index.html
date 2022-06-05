@@ -14,12 +14,13 @@
           <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
         </div>
     </nav>
-    <section class="row justify-content-left my-4">
+    <section class="row my-4 search-city">
         <div class="col-12 col-sm-6 col-md-4">
         </div>
         <div class="col-12 col-sm-6 col-md-4" id ="text-align-left">
           <form>
             <div class="form-group">
+                <p class ="para">Search for a city:</p>
               <input type="text" class="form-control" id="city-input" placeholder="city" />
             </div>
             <button class="btn btn-block btn-info" id = "submit">Submit</button>
@@ -27,56 +28,96 @@
         <div class ="history-places"></div>
         </div>
       </section>
+      <div>
+        <div class="card-body">
+          <h3 class="card-header bg-info" id ="header-1">
+            Service 1
+          </h3>          
+          <p id ="temp1"></p>
+          <p id="wind1"></p>
+          <P id="humidity1"></P>
+          <p id="uv1"></p>
+          <p id="date1"></p>
+          <p id="icon1"></p>
+        </div>
+      </div>
     <main class="container">
         <section class="row my-4">
-          <div class="col-12 col-md-9">
+          <div class="col-12 col-md-12">
             <h2>5-Day Forecast</h2>
             <section class="row justify-content-around">
-              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+              <div class="col-12 col-sm-6 col-lg-2 mb-3">
                 <div class="card">
-                  <h3 class="card-header bg-info" id ="header-1">
+                  <h3 class="card-header bg-info" id ="header-2">
                     Service 1
                   </h3>
                   <div class="card-body">
-                    <p class="card-text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium dolor at, blanditiis rem
-                      quisquam ipsam ipsum. Magnam ut quibusdam facilis consequatur veritatis, ullam molestiae, inventore
-                      neque,
-                      quas obcaecati laborum?
-                    </p>
-                    <button class="btn btn-block btn-info">Learn more.</button>
+                    <p id ="temp2"></p>
+                    <p id="wind2"></p>
+                    <P id="humidity2"></P>
+                    <p id="uv2"></p>
+                    <p id="date2"></p>
+                    <p id="icon2"></p>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+              <div class="col-12 col-sm-6 col-lg-2 mb-3">
                 <div class="card">
-                  <h3 class="card-header bg-success" id = "header-2">
+                  <h3 class="card-header bg-success" id = "header-3">
                     Service 2
                   </h3>
                   <div class="card-body">
-                    <p class="card-text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium dolor at, blanditiis rem
-                      quisquam ipsam ipsum. Magnam ut quibusdam facilis consequatur veritatis, ullam molestiae, inventore
-                      neque,
-                      quas obcaecati laborum?
-                    </p>
-                    <button class="btn btn-block btn-info">Learn more.</button>
+                    <p id ="temp3"></p>
+                    <p id="wind3"></p>
+                    <P id="humidity3"></P>
+                    <p id="uv3"></p>
+                    <p id="date3"></p>
+                    <p id="icon3"></p>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-lg-4 mb-3">
+              <div class="col-12 col-sm-6 col-lg-2 mb-3">
                 <div class="card">
-                  <h3 class="card-header bg-warning" id="header-3">
+                  <h3 class="card-header bg-warning" id="header-4">
                     Service 3
                   </h3>
                   <div class="card-body">
-                    <p class="card-text">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium dolor at, blanditiis rem
-                      quisquam ipsam ipsum. Magnam ut quibusdam facilis consequatur veritatis, ullam molestiae, inventore
-                      neque,
-                      quas obcaecati laborum?
-                    </p>
-                    <button class="btn btn-block btn-info">Learn more.</button>
+                    <p id ="temp4"></p>
+                    <p id="wind4"></p>
+                    <P id="humidity4"></P>
+                    <p id="uv4"></p>
+                    <p id="date4"></p>
+                    <p id="icon4"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-2 mb-3">
+                <div class="card">
+                  <h3 class="card-header bg-warning" id="header-5">
+                    Service 3
+                  </h3>
+                  <div class="card-body">
+                    <p id ="temp5"></p>
+                    <p id="wind5"></p>
+                    <P id="humidity5"></P>
+                    <p id="uv5"></p>
+                    <p id="date5"></p>
+                    <p id="icon5"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-lg-2 mb-3">
+                <div class="card">
+                  <h3 class="card-header bg-warning" id="header-6">
+                    Service 3
+                  </h3>
+                  <div class="card-body">
+                    <p id ="temp6"></p>
+                    <p id="wind6"></p>
+                    <P id="humidity6"></P>
+                    <p id="uv6"></p>
+                    <p id="date6"></p>
+                    <p id="icon6"></p>
                   </div>
                 </div>
               </div>
