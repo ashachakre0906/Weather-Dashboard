@@ -29,8 +29,8 @@ function secondAPI(lat,lon){
     .then(data => {
         console.log(data)
         for (i = 0 ; i < 6 ; i++){
-            var header = document.getElementById("header-"+(i + 1))
-            header.innerText = data.daily[i].temp.max;
+            // var header = document.getElementById("header-"+(i + 1))
+            // header.innerText = data.daily[i].temp.max;
 
             var temp = document.getElementById("temp"+(i + 1))
             temp.innerText = data.daily[i].temp.max;
