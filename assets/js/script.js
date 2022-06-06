@@ -1,21 +1,14 @@
 var cityInput = document.getElementById("city-input");
 var submit = document.getElementById("submit");
+var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 submit.addEventListener("click",firstAPI);
 function firstAPI(event){
     event.preventDefault();
     var cityName = cityInput.value;
-    //create a button and append it to the search history
-    //setting the inner text of the button
-    //append the button to the search history div
-    //push city name to empty array define as a global variable
-    //reference the quiz game 
-    //save it in local storage
-    //for loop for appending the buttons on the page
-
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=e370853221b13b2bbf9ed25f7b4f15e1")
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+    console.log(data)
     var lat = data.coord.lat;
     var lon = data.coord.lon;
     secondAPI(lat,lon);
@@ -54,4 +47,22 @@ function secondAPI(lat,lon){
     }
      );//2nd promise
 }
-  
+  //function to display error when user don't enter any city in the search box
+//getting previous searched city from the local storage
+// var savedCities = JSON.parse((localStorage.getItem("cities"))) || [];
+// function cityfromStorage(){
+//     for (i = 0; i < savedCities.length; i++){
+//         $("city-list").prepend("<button type ='button' class='btn btn-light prev-city'>"+savedCities[i]+"</button")
+//     }
+   
+// }
+
+// function to save the city to local storage
+submit.addEventListener("click".function())
+{
+    firstAPI(cityName);
+    searchHistory.push(cityName);
+    localStorage.setItem("search",JSON.stringify("searchHistory"));
+
+};
+

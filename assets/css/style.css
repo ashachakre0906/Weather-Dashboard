@@ -26,8 +26,10 @@
     font-size:2rem;
     text-align: center;
 }
-.search-city{
-    
+.custom-class{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 

@@ -1,125 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="navbar bg-light">
-        <div class="container-fluid">
-          <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
-        </div>
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+      </div>
     </nav>
-    <section class="row my-4 search-city">
-        <div class="col-12 col-sm-6 col-md-4" id ="text-align-left">
+    <section class="col-lg-12 col-md-6 col-sm-4 bg-light border search-city">
+      <div class="row">
+        <div class="col-6">
           <form>
             <div class="form-group">
-                <p class ="para">Search for a city:</p>
-              <input type="text" class="form-control" id="city-input" placeholder="city" />
+              <p class="para">Search for a city:</p>
+              <input
+                type="text"
+                class="form-control"
+                id="city-input"
+                placeholder="city"
+              />
             </div>
-            <button class="btn btn-primary" id = "submit">Submit</button>
-        </form>
-        <div class="col-12 col-sm-6 col-lg-2 mb-3">
-          <div class="card">
-            <h3 class="card-header">
-            </h3>
-            <div class="card-body">
-              <p id ="temp1"></p>
-              <p id="wind1"></p>
-              <P id="humidity1"></P>
-              <p id="uv1"></p>
-              <p id="date1"></p>
-              <p id="icon1"></p>
+            <button class="btn btn-primary" id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+        <!--Card for the previously searched city-->
+          <div class="row">
+            <div class="col-6">
+              <div class="history-places" id="previously-searched">
+                <h3>Previously searched places</h3>
+                <ul class="city-list"></ul>
+              </div>
             </div>
           </div>
+      <!---Weather section-->
+      <div class="row">
+        <div class="col-6">
+          <h2>Today's Weather Summary</h2>
+          <p id="temp1"></p>
+          <p id="wind1"></p>
+          <p id="humidity1"></p>
+          <p id="uv1"></p>
+          <p id="date1"></p>
+          <p id="icon1"></p>
         </div>
-        </div>
-        <div class ="history-places"></div>
+      </div>
+    </section>
+    <main class="container">
+      <section class="row my-4">
+        <div class="col-12 col-md-6">
+          <h2>5-Days Forecast</h2>
+          <section class="row justify-content-around">
+            <div class="col-12 col-sm-6 col-lg-2 mb-3">
+              <div class="card">
+                <h3 class="card-header"></h3>
+                <div class="card-body">
+                  <p id="temp2"></p>
+                  <p id="wind2"></p>
+                  <p id="humidity2"></p>
+                  <p id="uv2"></p>
+                  <p id="date2"></p>
+                  <p id="icon2"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2 mb-3">
+              <div class="card">
+                <h3 class="card-header" id="header-3"></h3>
+                <div class="card-body">
+                  <p id="temp3"></p>
+                  <p id="wind3"></p>
+                  <p id="humidity3"></p>
+                  <p id="uv3"></p>
+                  <p id="date3"></p>
+                  <p id="icon3"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2 mb-3">
+              <div class="card">
+                <h3 class="card-header" id="header-4"></h3>
+                <div class="card-body">
+                  <p id="temp4"></p>
+                  <p id="wind4"></p>
+                  <p id="humidity4"></p>
+                  <p id="uv4"></p>
+                  <p id="date4"></p>
+                  <p id="icon4"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2 mb-3">
+              <div class="card">
+                <h3 class="card-header" id="header-5"></h3>
+                <div class="card-body">
+                  <p id="temp5"></p>
+                  <p id="wind5"></p>
+                  <p id="humidity5"></p>
+                  <p id="uv5"></p>
+                  <p id="date5"></p>
+                  <p id="icon5"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-2 mb-3">
+              <div class="card">
+                <h3 class="card-header" id="header-6"></h3>
+                <div class="card-body">
+                  <p id="temp6"></p>
+                  <p id="wind6"></p>
+                  <p id="humidity6"></p>
+                  <p id="uv6"></p>
+                  <p id="date6"></p>
+                  <p id="icon6"></p>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
-    <main class="container">
-        <section class="row my-4">
-          <div class="col-12 col-md-6">
-            <h2>5-Days Forecast</h2>
-            <section class="row justify-content-around">
-              <div class="col-12 col-sm-6 col-lg-2 mb-3">
-                <div class="card">
-                  <h3 class="card-header">
-                  </h3>
-                  <div class="card-body">
-                    <p id ="temp2"></p>
-                    <p id="wind2"></p>
-                    <P id="humidity2"></P>
-                    <p id="uv2"></p>
-                    <p id="date2"></p>
-                    <p id="icon2"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-2 mb-3">
-                <div class="card">
-                  <h3 class="card-header" id = "header-3">
-                  </h3>
-                  <div class="card-body">
-                    <p id ="temp3"></p>
-                    <p id="wind3"></p>
-                    <P id="humidity3"></P>
-                    <p id="uv3"></p>
-                    <p id="date3"></p>
-                    <p id="icon3"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-2 mb-3">
-                <div class="card">
-                  <h3 class="card-header" id="header-4">
-                  </h3>
-                  <div class="card-body">
-                    <p id ="temp4"></p>
-                    <p id="wind4"></p>
-                    <P id="humidity4"></P>
-                    <p id="uv4"></p>
-                    <p id="date4"></p>
-                    <p id="icon4"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-2 mb-3">
-                <div class="card">
-                  <h3 class="card-header" id="header-5">
-                  </h3>
-                  <div class="card-body">
-                    <p id ="temp5"></p>
-                    <p id="wind5"></p>
-                    <P id="humidity5"></P>
-                    <p id="uv5"></p>
-                    <p id="date5"></p>
-                    <p id="icon5"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-lg-2 mb-3">
-                <div class="card">
-                  <h3 class="card-header" id="header-6">
-                  </h3>
-                  <div class="card-body">
-                    <p id ="temp6"></p>
-                    <p id="wind6"></p>
-                    <P id="humidity6"></P>
-                    <p id="uv6"></p>
-                    <p id="date6"></p>
-                    <p id="icon6"></p>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </section>   
-      </main>
-    <script src="./assets/js/script.js"></script>  
-</body>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
