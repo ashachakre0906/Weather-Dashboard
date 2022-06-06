@@ -26,10 +26,17 @@
     font-size:2rem;
     text-align: center;
 }
-.custom-class{
-    display: flex;
+/* section{
+    display:flex;
+    flex-direction: column;
+    width:640px;
+    height:100%;
+} */
+
+.container-3 {
+    font-display: flex;
     flex-direction: row;
-    justify-content: center;
 }
+
 
 
