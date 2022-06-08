@@ -1,10 +1,14 @@
+//Global Variables
 var cityInput = document.getElementById("city-input");
-var submit = document.getElementById("submit");
+var searchCity = document.getElementById("submit");
 var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
-submit.addEventListener("click",firstAPI);
+searchCity.addEventListener("click",firstAPI);
 function firstAPI(event){
     event.preventDefault();
-    var cityName = cityInput.value;
+    var cityName = cityInput.value.trim();
+    console.log(cityName);
+    searchHistory.push(cityName);
+    //set storage
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=e370853221b13b2bbf9ed25f7b4f15e1")
     .then(response => response.json())
     .then(data => {
@@ -42,27 +46,26 @@ function secondAPI(lat,lon){
 
             var icon = document.getElementById("icon"+(i + 1))
             icon.innerText = data.daily[i].weather[0].icon;
-        }
 
     }
-     );//2nd promise
+});
+     //2nd promise
 }
-  //function to display error when user don't enter any city in the search box
-//getting previous searched city from the local storage
+
+
+// getting previous searched city from the local storage
 // var savedCities = JSON.parse((localStorage.getItem("cities"))) || [];
-// function cityfromStorage(){
-//     for (i = 0; i < savedCities.length; i++){
-//         $("city-list").prepend("<button type ='button' class='btn btn-light prev-city'>"+savedCities[i]+"</button")
-//     }
+function cityfromStorage(){
+    for (i = 0; i < searchHistory.length; i++){
+        $("city-list").prepend("<button type ='button' class='btn btn-light prev-city'>"+searchHistory[i]+"</button")
+    }
    
-// }
+}
+cityfromStorage();
 
 // function to save the city to local storage
-submit.addEventListener("click".function())
-{
-    firstAPI(cityName);
-    searchHistory.push(cityName);
-    localStorage.setItem("search",JSON.stringify("searchHistory"));
-
-};
+// submit.addEventListener("click".function()){
+//     firstAPI(cityName);
+//     searchHistory.push(cityName);
+//     localStorage.setItem("search",JSON.stringify("searchHistory"));
 
