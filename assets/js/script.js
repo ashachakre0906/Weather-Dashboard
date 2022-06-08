@@ -8,6 +8,8 @@ function firstAPI(event){
     var cityName = cityInput.value.trim();
     console.log(cityName);
     searchHistory.push(cityName);
+    localStorage.setItem("search",JSON.stringify(searchHistory));
+    console.log(searchHistory);
     //set storage
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=e370853221b13b2bbf9ed25f7b4f15e1")
     .then(response => response.json())
@@ -55,13 +57,13 @@ function secondAPI(lat,lon){
 
 // getting previous searched city from the local storage
 // var savedCities = JSON.parse((localStorage.getItem("cities"))) || [];
-function cityfromStorage(){
+function history(){
     for (i = 0; i < searchHistory.length; i++){
-        $("city-list").prepend("<button type ='button' class='btn btn-light prev-city'>"+searchHistory[i]+"</button")
+        ("city-list").append("<button type ='button' class='btn btn-light prev-city'>"+searchHistory[i]+"</button")
     }
    
 }
-cityfromStorage();
+history();
 
 // function to save the city to local storage
 // submit.addEventListener("click".function()){
