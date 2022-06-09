@@ -1,26 +1,37 @@
-
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-search{
+    width:30%;
+    height:30%;
+}
 .btn {
-    display: inline-block;
     font-weight: 400;
     line-height: 1.5;
     color:white;
+    width:449px ;
+    height:38px ;
     text-align: center;
     background-color: transparent;
     border: 1px solid transparent;
     font-size: 1rem;
-    background-color: blue;
-}
-.btn-xl {
-    padding: 10px 20px;
-    font-size: 18px;
-    border-radius: 10px;
-    width:80%;
+    background-color:cadetblue;
+    border-radius: 8px;
+    border-color: cadetblue;
+    margin:2px;
 }
 .container-fluid{
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color:azure;
     padding:15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 .navbar-brand{
     font-size:2rem;
@@ -33,10 +44,25 @@
     height:100%;
 } */
 
-.container-3 {
-    font-display: flex;
-    flex-direction: row;
+
+span .navbar-brand h1 {
+    text-align: center;
 }
-
-
+#submit{
+    border-bottom:2px solid black;
+}
+.forecast{
+    text-align: center;
+}
+.card{
+    display:flex;
+    flex-direction:flex-end;
+    justify-content: space-between;
+    margin:10px;
+    width:50%;
+    height:50%;
+}
+.card-body{
+    flex-direction: row-reverse;
+}
 
