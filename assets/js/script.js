@@ -5,11 +5,31 @@ var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 searchCity.addEventListener("click",firstAPI);
 function firstAPI(event){
     event.preventDefault();
+    console.log(event);
     var cityName = cityInput.value.trim();
+    if (event.target.innerText !== "Search"){
+        cityName = event.target.innerText
+    }
+    else if (event.target.innerText == "Search" && cityName == ""){
+        return;
+
+    }
     console.log(cityName);
-    searchHistory.push(cityName);
+    if (searchHistory.includes(cityName)){
+    }
+    else {
+        searchHistory.push(cityName);
+        var button = document.createElement("button");
+        button.classList.add("btn","btn-light","prev-city");
+        button.innerText = cityName;
+        button.addEventListener("click",firstAPI)
+       document.getElementById("previously-searched").appendChild(button);
+        
+    }
+    //set the elements .innerhtml = cityname
     localStorage.setItem("search",JSON.stringify(searchHistory));
     console.log(searchHistory);
+    cityInput.value = "";
     //set storage
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+cityName+"&appid=e370853221b13b2bbf9ed25f7b4f15e1")
     .then(response => response.json())
@@ -45,9 +65,10 @@ function secondAPI(lat,lon){
 
             var date = document.getElementById("date"+(i + 1))
             date.innerText = data.daily[i].dt;
+            var iconUrl = `https://openweathermap.org/img/w/${data.daily[i].weather[0].icon}.png`;
 
             var icon = document.getElementById("icon"+(i + 1))
-            icon.innerText = data.daily[i].weather[0].icon;
+            icon.src = iconUrl;
 
     }
 });
@@ -59,7 +80,11 @@ function secondAPI(lat,lon){
 // var savedCities = JSON.parse((localStorage.getItem("cities"))) || [];
 function history(){
     for (i = 0; i < searchHistory.length; i++){
-        ("city-list").append("<button type ='button' class='btn btn-light prev-city'>"+searchHistory[i]+"</button")
+        var button = document.createElement("button");
+        button.classList.add("btn","btn-light","prev-city");
+        button.innerText = searchHistory[i];
+        button.addEventListener("click",firstAPI)
+       document.getElementById("previously-searched").appendChild(button);
     }
    
 }
