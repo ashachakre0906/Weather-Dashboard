@@ -6,8 +6,8 @@ The challenge is to build a weather dashboard that will run in the browser and f
 
 ## Links
 
-[Github URL here](https://github.com/ashachakre0906/Work-Day-Planner)<br>
-[Live webpage URL](https://ashachakre0906.github.io/Work-Day-Planner/)<br>
+[Github Repo URL](https://github.com/ashachakre0906/Weather-Dashboard)<br>
+[Live webpage URL](https://ashachakre0906.github.io/Weather-Dashboard/)<br>
 
 ## User Story
 
