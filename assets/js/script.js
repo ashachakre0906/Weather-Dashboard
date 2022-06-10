@@ -2,6 +2,7 @@
 var cityInput = document.getElementById("city-input");
 var searchCity = document.getElementById("submit");
 var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+// const fahrenheit = (temp * 9) / 5 + 32;
 searchCity.addEventListener("click",firstAPI);
 function firstAPI(event){
     event.preventDefault();
@@ -38,7 +39,8 @@ function firstAPI(event){
     var lat = data.coord.lat;
     var lon = data.coord.lon;
     secondAPI(lat,lon);
-
+    var firstCard = document.getElementById("city1");
+    firstCard.innerText = data.name;
     });
 
 }
@@ -47,10 +49,11 @@ function secondAPI(lat,lon){
     .then(response => response.json())//1st promise
     .then(data => {
         console.log(data)
+        var timeZone = data.timezone;
+        console.log(timeZone);
         for (i = 0 ; i < 6 ; i++){
             // var header = document.getElementById("header-"+(i + 1))
             // header.innerText = data.daily[i].temp.max;
-
             var temp = document.getElementById("temp"+(i + 1))
             temp.innerText = data.daily[i].temp.max;
 
@@ -64,7 +67,7 @@ function secondAPI(lat,lon){
             uvIndex.innerText = data.daily[i].uvi; 
 
             var date = document.getElementById("date"+(i + 1))
-            date.innerText = data.daily[i].dt;
+            date.innerText = moment().tz(timeZone).add(i,"days").format("M/DD/YY")
             var iconUrl = `https://openweathermap.org/img/w/${data.daily[i].weather[0].icon}.png`;
 
             var icon = document.getElementById("icon"+(i + 1))
@@ -76,8 +79,7 @@ function secondAPI(lat,lon){
 }
 
 
-// getting previous searched city from the local storage
-// var savedCities = JSON.parse((localStorage.getItem("cities"))) || [];
+// getting previous searched city from the local storage and adding button 
 function history(){
     for (i = 0; i < searchHistory.length; i++){
         var button = document.createElement("button");

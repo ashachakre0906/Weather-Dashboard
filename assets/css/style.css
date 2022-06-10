@@ -63,6 +63,15 @@ span .navbar-brand h1 {
     height:50%;
 }
 .card-body{
-    flex-direction: row-reverse;
+    flex-direction: row;
 }
+.container-2{
+ position: relative;
+}
+.weather-summary{
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    border: 3px solid #73AD21;
+  }
 
