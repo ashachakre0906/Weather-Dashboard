@@ -8,6 +8,7 @@ body{
     width:30%;
     height:30%;
     float:left;
+    margin-left:10px;
 }
 .btn {
     font-weight: 400;
