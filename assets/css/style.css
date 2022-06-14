@@ -1,89 +1,81 @@
-body{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.container-search{
-    width:30%;
-    height:30%;
-    float:left;
-    margin-left:10px;
+.container-search {
+  width: 30%;
+  height: 30%;
+  float: left;
+  margin-left: 10px;
 }
 .btn {
-    font-weight: 400;
-    line-height: 1.5;
-    color:white;
-    width:100% ;
-    height:38px ;
-    text-align: center;
-    background-color: transparent;
-    border: 1px solid transparent;
-    font-size: 1rem;
-    background-color:cadetblue;
-    border-radius: 8px;
-    border-color: cadetblue;
-    margin:2px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white;
+  width: 100%;
+  height: 38px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  background-color: cadetblue;
+  border-radius: 8px;
+  border-color: cadetblue;
+  margin: 2px;
 }
-.container-fluid{
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color:azure;
-    padding:15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+.container-fluid {
+  background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: azure;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.navbar-brand{
-    font-size:2rem;
-    text-align: center;
+.navbar-brand {
+  font-size: 2rem;
+  text-align: center;
 }
-/* section{
-    display:flex;
-    flex-direction: column;
-    width:640px;
-    height:100%;
-} */
-
 
 span .navbar-brand h1 {
-    text-align: center;
+  text-align: center;
 }
-#submit{
-    border-bottom:2px solid black;
+#submit {
+  border-bottom: 2px solid black;
 }
-.forecast{
-    text-align: center;
+.forecast {
+  text-align: center;
 }
-.card{
-    justify-content: space-between;
-    margin:10px;
-    width:10%;
-    height:50%;
-    float: left;
+.card {
+  justify-content: space-between;
+  margin: 10px;
+  width: 10%;
+  height: 50%;
+  float: left;
 }
-.card-body{
-    flex-direction: row;
+.card-body {
+  flex-direction: row;
 }
-.container-2{
- position: relative;
+.container-2 {
+  position: relative;
 }
-.weather-summary{
-    border: 1px solid black;
-    float: left;
-    margin-left:10px;
-    width:60%;
-    max-height: 50%;
-  }
-  main{
-      clear:both;
-  }
- #todaysWeather{
-     display:none;
- }
- #forecast{
-     display:none;
- }
-
-
+.weather-summary {
+  border: 1px solid black;
+  float: left;
+  margin-left: 10px;
+  width: 60%;
+  max-height: 50%;
+}
+main {
+  clear: both;
+}
+/* When the screen loads,hiding todays weather section */
+#todaysWeather {
+  display: none;
+}
+/* When the screen loads,hiding 5-days-forecast section */
+#forecast {
+  display: none;
+}

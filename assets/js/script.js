@@ -70,7 +70,7 @@ function secondAPI(lat,lon){
             //This will pull the uvIndex from the API.
             var uvIndex = document.getElementById("uv"+(i + 1))
             uvIndex.innerText = data.daily[i].uvi; 
-            //if condition to  indicates whether the conditions are favorable, moderate, or severe
+            //if condition to indicates whether the conditions are favorable, moderate, or severe
             if ( data.daily[i].uvi < 3) {
                 uvIndex.style.backgroundColor ="green" //favourable
             }

@@ -17,6 +17,7 @@
         <span class="navbar-brand mb-0 h1" id = "header">🌩 Weather Dashboard</span>
       </div>
     </nav>
+    <!--container to search for a city-->
     <div class="container-search bg-light border search-city">
       <div class="common-row">
           <form>
@@ -31,12 +32,12 @@
              </div>
               <button class="btn btn-primary" id="submit">Search</button>
           </form>
-                 <!--Card for the previously searched city-->
+                 <!--section to display previously searched city-->
             <div class="history-places" id="previously-searched">
             </div>
       </div>
     </div>
-      <!----Weather section-->
+      <!----Current weather section-->
       <div class ="container-2 bg-light border" id ="todaysWeather">
         <div class="weather-summary">
           <div class="col-md-6 ">
@@ -99,6 +100,7 @@
               </div>
             </div>
           </main>
+          <!--links below includes momemt.js,timezone and my script.js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.js"></script>
         <script src="./assets/js/script.js"></script>
