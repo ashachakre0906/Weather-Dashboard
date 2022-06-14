@@ -1,13 +1,15 @@
 //Global Variables
 var cityInput = document.getElementById("city-input");
 var searchCity = document.getElementById("submit");
+var todaysWeatherSummary = document.getElementById("todaysWeather");
+var fiveDaysforeCast = document.getElementById("forecast");
 var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
-// var fahrenheit = (temp * 9) / 5 + 32;
 searchCity.addEventListener("click",firstAPI);
 function firstAPI(event){
     event.preventDefault();
-    
-    console.log(event);
+    todaysWeatherSummary.style.display = "block";
+    fiveDaysforeCast.style.display = "block";
+    // console.log(event);   
     var cityName = cityInput.value.trim();
     if (event.target.innerText !== "Search"){
         cityName = event.target.innerText
@@ -62,7 +64,7 @@ function secondAPI(lat,lon){
             wind.innerText = data.daily[i].wind_speed;
 
             var humidity = document.getElementById("humidity"+(i + 1))
-            humidity.innerText = data.daily[i].humidity;
+            humidity.innerText = data.daily[i].humidity + "%";
 
             var uvIndex = document.getElementById("uv"+(i + 1))
             uvIndex.innerText = data.daily[i].uvi; 
@@ -98,7 +100,6 @@ function secondAPI(lat,lon){
 
     );
 }
-
      //2nd promise
 
 
@@ -114,11 +115,3 @@ function history(){
    
 }
 history();
-
-var uvWarnings = {
-    green: "* You can safely stay outside using standard daily sun protection: broad spectrum SPF 30+ sunscreen containing zinc, sunglasses, and hat. Don't forget: in winter, reflection off snow can nearly double UV strength.",
-    yellow: "* Stay in the shade during late morning through mid-afternoon. Wear broad spectrum SPF 30+ sunscreen containing zinc, sunglasses, and hat.",
-    orange: "* Stay in the shade as much as possible, especially during late morning through mid-afternoon. Wear broad spectrum SPF 30+ sunscreen containing zinc, protective clothing (long-sleeved shirt and pants), sunglasses, and wide-brimmed hat.",
-    red: "* Extra protection needed. Be careful outside, especially during late morning through mid-afternoon. Stay in the shade as much as possible, especially during late morning through mid-afternoon. Wear broad spectrum SPF 30+ sunscreen containing zinc, protective clothing (long-sleeved shirt and pants), sunglasses, and wide-brimmed hat. Please note: white sand on the beach will reflect UV rays and can double UV exposure.",
-    purple: "* Extra protection needed. Avoid sun exposure during late morning through mid-afternoon. Unprotected skin and eyes can burn in minutes. Wear broad spectrum SPF 30+ sunscreen containing zinc, protective clothing (like long-sleeves), sunglasses, and wide-brimmed hat. Please note: white sand on the beach will reflect UV rays and can double UV exposure."
-}

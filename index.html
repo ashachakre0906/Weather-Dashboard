@@ -37,7 +37,7 @@
       </div>
     </div>
       <!----Weather section-->
-      <div class ="container-2 bg-light border">
+      <div class ="container-2 bg-light border" id ="todaysWeather">
         <div class="weather-summary">
           <div class="col-md-6 ">
             <h4>Today's Weather Summary</h4>
@@ -52,58 +52,56 @@
           </div>
         </div>
       </div>
-      
-     <main class="container-3 bg-light border">
-       <div class="five-cards">
-        <h4 class="forecast">5-Days Forecast</h4>
-              <div class="card">
+           <!---Container for displaying 5-days Forecast-->
+          <main class="container-3 bg-light border">
+             <div class="five-cards" id = "forecast">
+                <h4 class="forecast">5-Days Forecast</h4>
+                <div class="card">
                   <p id="date2"></p>
                   <img id="icon2"></img>
                   <p>Temperature:<span id="temp2"></span></p>
                   <p>Wind: <span id="wind2"></span></p>
                   <p>Humidity: <span id="humidity2"></span></p>
                   <p>UV Index: <span id="uv2"></span></p>
-              </div>
-              <div class="card">
+                </div>
+                <div class="card">
                   <p id="date3"></p>
                   <img id="icon3"></img>
                   <p>Temperature:<span id="temp3"></span></p>
                   <p>Wind: <span id="wind3"></span></p>
                   <p>Humidity: <span id="humidity3"></span></p>
                   <p>UV Index: <span id="uv3"></span></p>
-              </div>
-            </div>
-              <div class="card">
+                </div>
+                <div class="card">
                   <p id="date4"></p>
                   <img id="icon4"></img>
                   <p>Temperature:<span id="temp4"></span></p>
                   <p>Wind: <span id="wind4"></span></p>
                   <p>Humidity: <span id="humidity4"></span></p>
                   <p>UV Index: <span id="uv4"></span></p>
-            </div>
-              <div class="card">
+                </div>
+                <div class="card">
                   <p id="date5"></p>
                   <img id="icon5"></img>
                   <p>Temperature:<span id="temp5"></span></p>
                   <p>Wind: <span id="wind5"></span></p>
                   <p>Humidity: <span id="humidity5"></span></p>
                   <p>UV Index: <span id="uv5"></span></p>
-            </div>
-              <div class="card">
+                </div>
+                <div class="card">
                   <p id="date6"></p>
                   <img id="icon6"></img>
                   <p>Temperature:<span id="temp6"></span></p>
                   <p>Wind: <span id="wind6"></span></p>
                   <p>Humidity: <span id="humidity6"></span></p>
                   <p>UV Index: <span id="uv6"></span></p>
+                </div>
               </div>
-          </div>
-        </div>
-       </div>
-      </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.js"></script>
-    <script src="./assets/js/script.js"></script>
+            </div>
+          </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.js"></script>
+        <script src="./assets/js/script.js"></script>
   </body>
 </html> 
 
