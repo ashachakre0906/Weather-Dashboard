@@ -6,8 +6,8 @@ The challenge is to build a weather dashboard that will run in the browser and f
 
 ## Links
 
-[Github Repo URL](https://github.com/ashachakre0906/Weather-Dashboard)<br>
-[Live webpage URL](https://ashachakre0906.github.io/Weather-Dashboard/)<br>
+[Solution URL](https://github.com/ashachakre0906/Weather-Dashboard)<br>
+[Deploy URL](https://ashachakre0906.github.io/Weather-Dashboard/)<br>
 
 ## User Story
 ```
@@ -32,7 +32,7 @@ THEN I am again presented with current and future conditions for that city
 
 ## Built with
 
-- HTMLs
+- HTML
 - CSS
 - Javascript
 - Bootstrap. 
