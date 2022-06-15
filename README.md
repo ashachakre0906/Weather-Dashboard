@@ -2,7 +2,7 @@
 
 ## Decsription of the project
 
-The challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+The challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.User should be able to search for any city name which would display current weather conditions,the temperature, the humidity, the wind speed, the UV index and five days forecast of that specific city.We are storing the previously searched cities in Local Storage and persistently displaying the same city on the webpage.UV index is presented with a color that indicates whether conditions are favorable, moderate, or severe.
 
 ## Links
 
@@ -38,6 +38,9 @@ THEN I am again presented with current and future conditions for that city
 - CSS
 - Javascript
 - Bootstrap. 
+## Screenshots of Search city and Five-days forecast
+<img src = ./assets/images/search-city.png>
+<img src = ./assets/images/five-days-forecast.png>
 
 ## Author
 
