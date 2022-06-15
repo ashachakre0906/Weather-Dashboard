@@ -2,7 +2,7 @@
 
 ## Decsription of the project
 
-The challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.User should be able to search for any city name which would display current weather conditions,the temperature, the humidity, the wind speed, the UV index and five days forecast of that specific city.We are storing the previously searched cities in Local Storage and persistently displaying the same city on the webpage.UV index is presented with a color that indicates whether conditions are favorable, moderate, or severe.
+The challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.User should be able to search for any city name which would display current weather conditions,the temperature, the humidity, the wind speed, the UV index and five days forecast of that particular city.We are storing the previously searched cities in Local Storage and persistently displaying the same cities on the webpage.UV index is presented with a color that indicates whether conditions are favorable, moderate, or severe.
 
 ## Links
 
@@ -10,13 +10,11 @@ The challenge is to build a weather dashboard that will run in the browser and f
 [Live webpage URL](https://ashachakre0906.github.io/Weather-Dashboard/)<br>
 
 ## User Story
-
 ```
 AS A traveler
 I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
 ```
-
 ## Acceptance Criteria
 ```
 GIVEN a weather dashboard with form inputs
@@ -42,9 +40,45 @@ THEN I am again presented with current and future conditions for that city
 <img src = ./assets/images/search-city.png>
 <img src = ./assets/images/five-days-forecast.png>
 
-## Author
+## Code Snippets 
 
-Starter code includes some parts of HTML and full CSS given by UC Berkely Extension.
+### For loop dynamically creating buttons and displaying previously searched cities to the webpage.Once user clicks on any buttons should pull the weather condition for the selected city.
+```
+function history(){
+    for (i = 0; i < searchHistory.length; i++){
+        var button = document.createElement("button");
+        button.classList.add("btn","btn-light","prev-city");
+        button.innerText = searchHistory[i];
+        button.addEventListener("click",firstAPI)
+       document.getElementById("previously-searched").appendChild(button);
+    }
+   
+}
+history();
+```
+### if condition to indicates whether the conditions are favorable, moderate, or severe
+```
+if ( data.daily[i].uvi < 3) {
+    uvIndex.style.backgroundColor ="green"
+}
+else if (data.daily[i].uvi < 6) {
+      
+uvIndex.style.backgroundColor ="yellow" 
+}
+else if (data.daily[i].uvi < 8) {
+uvIndex.style.backgroundColor ="orange" 
+}
+else if (data.daily[i].uvi < 11) {
+ uvIndex.style.backgroundColor ="red"
+}
+else {
+uvIndex.style.backgroundColor ="pink" //critical
+}
+
+```
+## Author
+Asha Chakre
+
 ## License
 
 Licensed under the [MIT](https://choosealicense.com/licenses/mit/) license.

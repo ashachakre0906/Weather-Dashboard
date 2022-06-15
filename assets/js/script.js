@@ -59,11 +59,11 @@ function secondAPI(lat,lon){
         for (i = 0 ; i < 6 ; i++){
             var temp = document.getElementById("temp"+(i + 1))
             //This will pull the temperature from the API.
-            // Math.floor method rounds a number DOWNWARDS to the nearest integer, and returns the result
+            // Math.floor method rounds a number DOWNWARDS to the nearest integer and converting the temp to Farenheit, and returns the result
             temp.innerText = Math.floor(((data.daily[i].temp.max-273.15)*1.8)+32)+ "°F";
             //This will pull the wind speed from the API.
             var wind = document.getElementById("wind"+(i + 1))
-            wind.innerText = data.daily[i].wind_speed;
+            wind.innerText = data.daily[i].wind_speed + " MPH";
             //This will pull the humidity from the API.
             var humidity = document.getElementById("humidity"+(i + 1))
             humidity.innerText = data.daily[i].humidity + "%";
